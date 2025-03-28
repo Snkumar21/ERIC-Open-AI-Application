@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/backgroundimage"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/MainActivityToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@color/white">
+
+        <TextView
+            android:id="@+id/MainActivityUserDetails"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@+id/toolbar"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:padding="10dp"
+            android:text="@string/hello_user"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:layout_toStartOf="@+id/MainActivityUserIcon"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/account"
+            android:layout_marginStart="-20dp"
+            android:id="@+id/MainOptions"
+            tools:ignore="ContentDescription" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+        <TextView
+            android:id="@+id/MainActivityEric"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/secrets_stencil"
+            android:gravity="center_horizontal"
+            android:text="@string/e_r_i_c"
+            android:textColor="@color/white"
+            android:textSize="80sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/white"
+            >
+
+            <ImageView
+                android:id="@+id/MainActivityChatAi"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/chatgpt_logo"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/MainActivityChatAiText"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_horizontal"
+                android:text="@string/chat_ai"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:layout_marginTop="75dp"
+                android:textStyle="bold"
+                tools:ignore="DuplicateIds" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/white"
+            >
+
+            <ImageView
+                android:id="@+id/MainActivityCreateImage"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/img"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/MainActivityCreateImageText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_horizontal"
+                android:text="@string/image_generator"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:layout_marginTop="75dp"
+                android:textStyle="bold"
+                tools:ignore="DuplicateIds" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="15dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/white"
+            >
+
+            <ImageView
+                android:id="@+id/MainActivityCreateVoice"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/voice"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/MainActivityCreateVoiceText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_horizontal"
+                android:text="@string/voice_generator"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:layout_marginTop="75dp"
+                android:textStyle="bold"
+                tools:ignore="DuplicateIds" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+        <Button
+            android:id="@+id/MainActivityLogout"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/logout"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginTop="100dp"
+             />
+
+</LinearLayout>

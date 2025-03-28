@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<string-array android:name="languages"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+        <item>English (US)</item>
+        <item>Español (ES)</item>
+        <item>Français (FR)</item>
+        <item>Deutsch (DE)</item>
+        <item>Italiano (IT)</item>
+</string-array>

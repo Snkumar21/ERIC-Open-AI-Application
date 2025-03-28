@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/profile_bg"
+    tools:context=".Option">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/userinfoBack"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/baseline_west_24"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/Profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="@string/profile"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="415dp"
+        android:layout_height="673dp"
+        android:padding="20dp"
+        android:id="@+id/constraintLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2"
+        tools:ignore="NotSibling">
+
+        <ImageView
+            android:id="@+id/dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/circle"
+            android:src="@drawable/dp_icon"
+            app:layout_constraintBottom_toTopOf="@+id/infoName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.171"
+            tools:ignore="ContentDescription,MissingConstraints" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/OptionCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:backgroundTint="#272525"
+            app:cardCornerRadius="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.488"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dp"
+            app:layout_constraintVertical_bias="0.071"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:id="@+id/infoName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.609"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="219dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/account"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/name"
+                    android:padding="20dp"
+                    android:textColorHint="@color/light_white"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="2dp" />
+
+                <TextView
+                    android:id="@+id/usernameEdit"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:textColor="@color/light_white"
+                    android:textColorHint="@color/light_white"
+                    android:textSize="16sp"
+                    tools:ignore="Autofill,LabelFor,TextFields" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:layout_marginTop="80dp"
+                >
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/baseline_local_phone_24"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/userPhone"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/phone"
+                    android:padding="20dp"
+                    android:textColorHint="@color/light_white"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="2dp" />
+
+                <TextView
+                    android:id="@+id/UserPhoneEdit"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:textColor="@color/light_white"
+                    android:textColorHint="@color/light_white"
+                    android:textSize="16sp"
+                    tools:ignore="Autofill,LabelFor,TextFields" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:layout_marginTop="160dp"
+                >
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/baseline_alternate_email_24"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/userEmail"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/email"
+                    android:padding="20dp"
+                    android:textColorHint="@color/light_white"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="2dp" />
+
+                <TextView
+                    android:id="@+id/UserEmailEdit"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:textColor="@color/light_white"
+                    android:textColorHint="@color/light_white"
+                    android:textSize="16sp"
+                    tools:ignore="Autofill,LabelFor,TextFields" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

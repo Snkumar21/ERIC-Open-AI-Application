@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/img_a"
+    tools:context=".Chat_Ai">
+
+    <RelativeLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.5"
+        android:background="#0C0C0C"/>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarChat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ChatTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rakkas_regular"
+        android:text="@string/chat_ai_generator"
+        android:textColor="#D6D1D1"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbarChat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/toolbarChat"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ChatRecyclerView"
+        android:layout_width="415dp"
+        android:layout_height="650dp"
+        android:layout_above="@id/ChatBottomLayout"
+        tools:layout_editor_absoluteY="81dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="@string/how_can_i_help_you_today"
+        android:textColor="@color/light_white"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/ChatBottomLayout"
+        app:layout_constraintTop_toTopOf="@+id/ChatRecyclerView"
+        tools:ignore="MissingConstraints" />
+
+    <RelativeLayout
+        android:id="@+id/ChatBottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout">
+
+        <EditText
+            android:id="@+id/ChatMessageEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toStartOf="@id/ChatSendBtn"
+            android:background="@drawable/rounded_corner"
+            android:gravity="center"
+            android:hint="@string/enter_your_text_here"
+            android:padding="16dp"
+            android:textColorHint="#B3A8A8"
+            android:textColor="@color/light_white"
+            tools:ignore="Autofill,TextFields" />
+
+        <ImageButton
+            android:id="@+id/ChatSendBtn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:src="@drawable/icon_send"
+            tools:ignore="ContentDescription" />
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
